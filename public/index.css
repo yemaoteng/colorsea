@@ -1,3 +1,14 @@
+.color_section {
+    float: left;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.color {
+    height:100px;
+    width: 250px;
+}
+
 .star {
     cursor: pointer;
     height: 25px;

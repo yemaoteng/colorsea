@@ -1,6 +1,7 @@
 import React from 'react'
 import AddColorForm from './AddColorForm'
 import ColorList from './ColorList'
+import { v4 } from 'uuid'
 //import PropTypes from 'prop-types'
 
 const logColor = (title,color) => {
@@ -8,8 +9,7 @@ const logColor = (title,color) => {
     console.log(`TODO: render UI with new Color`)
 }
 
-var colors = {
-    colors: [
+var colors = [
         {
             "id": "0175d1f0-a8c6-41bf-8d02-df5734d829a4",
             "title": "coean at dusk",
@@ -29,7 +29,6 @@ var colors = {
             "rating": 0
         }
     ]
-}
 
 class App extends React.Component {
     constructor(props) {
@@ -37,14 +36,41 @@ class App extends React.Component {
       this.state = {
          colors:[]
       }
+      this.addColor = this.addColor.bind(this)
+      this.rateColor = this.rateColor.bind(this)
+      this.removeColor = this.removeColor.bind(this)
     }
-    
+    addColor(title, color) {
+        const colors = [
+            ...this.state.colors,
+            {
+                id: v4(),
+                title,
+                color,
+                rating:0
+            }
+        ]
+        this.setState({colors})
+    }
+    rateColor(id,rating) {
+        const colors = this.state.colors.map(color =>
+            (color.id!==id) ? color : { ...color, rating}
+        )
+        this.setState({colors})
+    }
+    removeColor(id) {
+        const colors = this.state.colors.filter(color =>
+            color.id!==id
+        )
+        this.setState({colors})
+    }
     render() {
-        //const {colors} = this.state
+        const {addColor,rateColor,removeColor} = this
+        const {colors} = this.state
         return (
         <div className="app">
-            <AddColorForm onNewColor={logColor} />
-            <ColorList colors={colors.colors} />
+            <AddColorForm onNewColor={addColor} />
+            <ColorList colors={colors} rateColor={rateColor} removeColor={removeColor} />
         </div>
         )
     }
