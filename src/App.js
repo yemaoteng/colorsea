@@ -2,12 +2,13 @@ import React from 'react'
 import AddColorForm from './AddColorForm'
 import ColorList from './ColorList'
 import { v4 } from 'uuid'
+import colorsIni from './fakedata'
 
 class App extends React.Component {
     constructor(props) {
       super(props)
       this.state = {
-         colors:[]
+         colors:colorsIni
       }
       this.addColor = this.addColor.bind(this)
       this.rateColor = this.rateColor.bind(this)
