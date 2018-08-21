@@ -43,7 +43,7 @@ class App extends React.Component {
         const {colors} = this.state
         return (
         <div className="app">
-            <AddColorForm onNewColor={""} />
+            <AddColorForm onNewColor={addColor} />
             <ColorList colors={colors} onRate={rateColor} onRemove={removeColor} />
         </div>
         )
