@@ -1,0 +1,49 @@
+* {box-sizing: border-box;}
+html, body, #root, .app {
+    margin: 0;
+    padding: 0;
+}
+
+.colorcard {
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid grey;
+    h3 {
+        text-align: center;
+    }
+    .colordisplay {
+        width: 178px;
+        height: 50px;
+    }
+}
+
+.starrating {
+    border: 1px solid lavender;   
+    .star {
+        float: left;
+        border:1px solid red;
+        width: 25px;
+        height: 25px;
+        background-color: grey;
+        clip-path: polygon(
+            50% 0%,
+            40% 45%,
+            0% 45%,
+            35% 65%,
+            20% 100%,
+            50% 72%,
+            75% 100%,
+            65% 65%,
+            100% 45%,
+            60% 45%
+        )
+    }
+    .selected {
+        background-color: orange;
+    }
+}
+
+
