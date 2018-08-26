@@ -4,7 +4,7 @@ import {
     applyMiddleware
 } from 'redux'
 import { colors, sort } from './reducers'
-import stateData from '../../data/initialState'
+import stateData from '../data/initialState'
 
 const logger = store => next => action => {
     let result
@@ -32,5 +32,3 @@ const storeFactory = (initialState=stateData) =>
     )
 
 export default storeFactory
-
-
