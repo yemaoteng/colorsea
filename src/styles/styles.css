@@ -16,4 +16,40 @@ a {
   height: 0;
   clear: both;
 }
+
+.colorcard {
+  float: left;
+  width: 200px;
+  border: 1px solid gray;
+}
+
+.colorcard h3 {
+  text-align: center;
+}
+
+.colorcard .removebtn {
+  float: right;
+}
+
+.colorcard .colorshow {
+  width: 90%;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.star {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin: 2px;
+  float: left;
+  background-color: grey;
+  -webkit-clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+          clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+}
+
+.selected {
+  background-color: orange;
+}
 /*# sourceMappingURL=styles.css.map */

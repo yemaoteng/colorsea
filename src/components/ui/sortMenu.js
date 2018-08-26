@@ -7,7 +7,7 @@ const options = {
     rating: "SORT_BY_RATING"
 }
 
-const SortMenu = (sort="SORT_BY_DATE",onSelect=f=>f) =>
+const SortMenu = ({sort="SORT_BY_DATE",onSelect=f=>f}) =>
     <nav className="menu">
         <h1>Sort Colors</h1>
         {
@@ -22,7 +22,7 @@ const SortMenu = (sort="SORT_BY_DATE",onSelect=f=>f) =>
                             onSelect(options[item])
                         }
                     }
-                    >{item}</a>
+                >{item}</a>
             )
         }
     </nav>

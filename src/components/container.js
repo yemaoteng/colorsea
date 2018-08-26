@@ -35,11 +35,11 @@ export const Colors = connect(
         }),
     dispatch =>
         ({
-            onRevoe(id) {
+            onRemove(id) {
                 dispatch(removeColor(id))
             },
-            onRate(id,rating) {
-                dispatch(rateColor(id,rating))
+            onRate(id, rating) {
+                dispatch(rateColor(id, rating))
             }
         })
 )(ColorList)
