@@ -33,7 +33,7 @@ export const colors = (state=[],action) => {
             return state.map(c=>color(c,action))
         case C.REMOVE_COLOR:
             return state.filter(
-                c=>c.id!==action.id
+                c=>c.id !== action.id
             )
         default:
             return state
