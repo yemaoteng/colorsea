@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Star = ({selected,onRate=f=>f}) =>
+const Star = ({selected,onClick=f=>f}) =>
     <div 
         className={selected?"star selected":"star"} 
-        onClick={onRate}>
+        onClick={onClick}>
     </div>
 
 Star.propTypes = {

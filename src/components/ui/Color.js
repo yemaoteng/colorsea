@@ -3,20 +3,22 @@ import StarRating from './StarRating'
 import PropTypes from 'prop-types'
 
 
-const Color = ({ color, onRemvoe=f=>f, onRate=f=>f}) => 
+const Color = ({ title,color,rating,tiemstamp, onRemvoe=f=>f, onRate=f=>f}) => 
     <div className="colorcard">
-        <button onClick={()=>onRemvoe(color.id)} className="removebtn">X</button>
-        <h3>{color.title}</h3>
-        <p>{color.rating}</p>
-        <p>{color.color}</p>
+        <button onClick={onRemvoe} className="removebtn">X</button>
+        <h3>{title}</h3>
+        <p>{rating}</p>
+        <p>{color}</p>
         <div className="colorshow" 
-            style={{backgroundColor:color.color}}></div>
-        <StarRating rating={color.rating} onRate={onRate} />
+            style={{backgroundColor:color}}></div>
+        <StarRating starsSelected={rating} onRate={onRate} />
     </div>
 
 Color.propTypes = {
-    color: PropTypes.object,
-    onRemvoe: PropTypes.func,
+    title: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
+    rating: PropTypes.number,
+    onRemove: PropTypes.func,
     onRate: PropTypes.func
 }
 

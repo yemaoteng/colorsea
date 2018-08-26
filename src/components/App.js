@@ -1,5 +1,5 @@
 import React from 'react'
-import { NewColor, Colors, Menu } from './container';
+import { NewColor, Colors, Menu } from './containers';
 
 const App = () =>
     <div className="app">
