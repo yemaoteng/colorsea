@@ -1,0 +1,19 @@
+html body #root .app {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  border: 1px solid red;
+  float: left;
+  width: 100px;
+  line-height: 38px;
+}
+
+.menu::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -3,6 +3,7 @@ import {render} from 'react-dom'
 import {Provider} from 'react-redux'
 import App from './components/App'
 import storeFactory from './store/storeindex'
+import './styles/styles.css'
 
 const store = new storeFactory()
 
