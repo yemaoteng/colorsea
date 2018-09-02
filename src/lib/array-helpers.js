@@ -1,3 +1,5 @@
+import C from '../constants'
+
 const sortBy = (type, field) => {
     switch (type) {
         case "date" :
@@ -10,9 +12,9 @@ const sortBy = (type, field) => {
 }
 
 export const sortFunction = sort =>
-    (sort === "SORTEDED_BY_TITLE") ?
+    (sort === C.SORTED_BY_TITLE) ?
         sortBy("string", "title") :
-        (sort === "SORTEDED_BY_RATING") ?
+        (sort === C.SORTED_BY_RATING) ?
             sortBy("number", "rating") :
             sortBy("date", "timestamp")
 
