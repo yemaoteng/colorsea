@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const options = {
-    date: "SORT_BY_DATE",
-    title: "SORT_BY_TITLE",
-    rating: "SORT_BY_RATING"
+    date: "SORTED_BY_DATE",
+    title: "SORTED_BY_TITLE",
+    rating: "SORTED_BY_RATING"
 }
 
-const SortMenu = ({sort="SORT_BY_DATE",onSelect=f=>f}) =>
+const SortMenu = ({sort="SORTED_BY_DATE",onSelect=f=>f}) =>
     <nav className="menu">
         <h1>Sort Colors</h1>
         {
