@@ -18,9 +18,12 @@ a {
 }
 
 .colorcard {
+  position: relative;
   float: left;
+  margin: 0 10px 10px 10px;
   width: 300px;
   border: 1px solid gray;
+  border-radius: 10px;
 }
 
 .colorcard h3 {
@@ -28,7 +31,16 @@ a {
 }
 
 .colorcard .removebtn {
-  float: right;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 1px solid grey;
+  background-color: white;
 }
 
 .colorcard .colorshow {
