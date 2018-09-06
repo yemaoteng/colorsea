@@ -16,7 +16,7 @@ const SortMenu = ({sort=C.SORTED_BY_DATE,onSelect=f=>f}) =>
                 <a
                     key={i}
                     href="#"
-                    className={(sort===options[item])?"sortby selected":"sortby"}
+                    className={(sort===options[item])?"sortby selectedSort":"sortby"}
                     onClick={
                         e=> {
                             e.preventDefault()

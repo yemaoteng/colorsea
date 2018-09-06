@@ -14,6 +14,7 @@ const AddColorForm = ({onNewColor=f=>f}) => {
 
     return (
         <form className="add-color" onSubmit={submit}>
+            <h2>Add Color</h2>
             <input
                 ref={input=>_title = input}
                 type="text"

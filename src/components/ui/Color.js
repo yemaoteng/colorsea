@@ -7,12 +7,10 @@ const Color = ({ title,color,rating,tiemstamp,id, onRemove=f=>f, onRate=f=>f}) =
     <div className="colorcard">
         <button onClick={onRemove} className="removebtn">X</button>
         <h3>{title}</h3>
-        <p>{rating}</p>
-        <p>{color}</p>
-        <p>{id}</p>
+        <p>{color}</p>    
         <div className="colorshow" 
             style={{backgroundColor:color}}></div>
-        <StarRating starsSelected={rating} onRate={onRate} />
+        <StarRating starsSelected={rating} onRate={onRate} />  
     </div>
 
 Color.propTypes = {
